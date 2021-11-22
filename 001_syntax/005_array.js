@@ -4,6 +4,7 @@
  */
 
 function printArray(array) {
+  
 }
 
 /**
