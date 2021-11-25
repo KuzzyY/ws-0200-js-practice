@@ -6,13 +6,12 @@
  *
  */
  function printMessageByAge(age) {
-  if (age > 20) {
+  if (20 <= age) {
     console.log('成年です。');
   } else {
     console.log('未成年です。');
   }
 }
-printMessageByAge(10);
 
 /**
  *  2.2 引数から与えられた時間が
@@ -36,7 +35,6 @@ printMessageByAge(10);
     console.log('null');
   }
 }
-greeding(12);
 
 /**
  *  2.3 引数から与えられた数字に対応する曜日を返却するメソッドを実装してください
@@ -51,15 +49,10 @@ greeding(12);
  *
  */
 
-//  const day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-//  console.log(day[0]);
-
-// 途中のコード
-function getDay(day) {
-  const day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  console.log(day[0]);
+ function getDay(day) {
+  const dayList = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  console.log(dayList[day]);
 }
-getDay(0);
 
 
 module.exports = {
