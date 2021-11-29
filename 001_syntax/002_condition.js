@@ -49,10 +49,21 @@
  *
  */
 
+
  function getDay(day) {
-  const dayList = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  console.log(dayList[day]);
+  const dayList = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return dayList[day];
 }
+
+// console.log(getDay(3));
 
 
 module.exports = {

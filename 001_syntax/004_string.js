@@ -3,46 +3,45 @@
  *
  */
 
- function length(str) {
-  console.log(str .length);
+function length(str) {
+  return str.length;
 }
-length('good');
+// length('good');
 
 /**
  *  4.2 文字列のながさが偶数の場合にtrueを返却するメソッドを実装してください
  *
  */
 
- function lengthIsEven(str) {
-  console.log(str .length);
-  if (str .length % 2 === 0) {
-    console.log('true');
+function lengthIsEven(str) {
+  console.log(str.length);
+  if (str.length % 2 === 0) {
+    return true;
   } else {
-    console.log('false');
+    return false;
   }
 }
-lengthIsEven('good');
+// lengthIsEven('good');
 
 /**
  *  4.3 文字列の先頭一文字目を返却するメソッドを実装してください
  *
  */
 
-
- function firstChar(str) {
-  console.log(str.slice(0, 1));
+function firstChar(str) {
+  return str.slice(0, 1);
 }
-firstChar('good');
+// firstChar('good');
 
 /**
  *  4.4 文字列の末尾一文字目を返却するメソッドを実装してください
  *
  */
 
- function lastChar(str) {
-  console.log(str.slice(-1));
+function lastChar(str) {
+  return str.slice(-1);
 }
-lastChar('good');
+// lastChar('good');
 
 /**
  *  4.5 文字列と二つの数字a, bを渡すとa文字目から, b文字目まで
@@ -51,9 +50,9 @@ lastChar('good');
  */
 
  function substring(str, a, b) {
-  console.log(str.slice(a, b));
+  return str.substring(-a, b);
 }
-substring('good', 1, 3);
+// substring('good', 1, 3);
 
 /**
  *  4.6 引数に与えられた二つの引数のうち、一つ目の引数の文字列に二つ目の引数の文字列が
@@ -66,14 +65,14 @@ substring('good', 1, 3);
  *      "hogegeho", "fugafuga" => false
  * */
 
- function isInclude(a, b) {
-  if (a .includes(b)) {
-    console.log('true');
+function isInclude(a, b) {
+  if (a.includes(b)) {
+    return true;
   } else {
-    console.log('false');
+    return false;
   }
 }
-isInclude('anytime', 'any');
+// isInclude('anytime', 'any');
 
 /**
  *  4.7 引数で渡された文字列を一文字ずつ表示するメソッドを実装してください
@@ -90,11 +89,10 @@ isInclude('anytime', 'any');
  *
  */
 
- function printByChar(str) {
-  console.log(str .split(''));
+function printByChar(str) {
+  console.log(str.split(''));
 }
-printByChar('good');
-
+// printByChar('good');
 
 module.exports = {
   length,
@@ -103,5 +101,5 @@ module.exports = {
   lastChar,
   substring,
   isInclude,
-  printByChar
-}
+  printByChar,
+};

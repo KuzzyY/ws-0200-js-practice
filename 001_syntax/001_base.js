@@ -11,8 +11,8 @@ function helloWorld() {
  *  1.2 const を使って"hoge"という文字列を定義した変数を定義し、それを出力する関数を定義してください
  *
  */
- function displayConst() {
-  const Hoge = 'hoge';
+function displayConst() {
+  const Hoge = "hoge";
   console.log(Hoge);
 }
 // displayConst();
@@ -22,7 +22,7 @@ function helloWorld() {
  *
  */
 function displayLet() {
-  let Hoge = 'hoge';
+  let Hoge = "hoge";
   console.log(Hoge);
 }
 // displayLet();
@@ -32,8 +32,8 @@ function displayLet() {
  * を表示するメソッドを実装してください
  *
  */
- function displayArgument(arg) {
-   console.log(arg);
+function displayArgument(arg) {
+  console.log(arg);
 }
 // displayArgument('sampleArg');
 
@@ -61,22 +61,18 @@ function subtractTwoArgs(a, b) {
 }
 // console.log(subtractTwoArgs(1, 2));
 
-
-
 /**
  *  1.7 渡された二つの引数の商を返却するメソッドを実装してください。0での割り算はnullを返却してください。
  *
  */
- function quotientTwoArgs(a, b) {
-  if (a && b !== 0){
-    console.log(a / b);
+function quotientTwoArgs(a, b) {
+  if (a && b !== 0) {
+    return a / b;
   } else {
-    console.log('null');
+    return null;
   }
 }
-// quotientTwoArgs(1,3);
-
-
+// console.log(quotientTwoArgs(3,1));
 
 /**
  *  1.8 渡された二つの引数の積を返却するメソッドを実装してください
@@ -91,7 +87,7 @@ function productTwoArgs(a, b) {
  *  1.9 渡された引数の2で割ったあまりを返却するメソッドを実装してください
  *
  */
- function remainderTwoArgs(a) {
+function remainderTwoArgs(a) {
   return a % 2;
 }
 // console.log(remainderTwoArgs(5));
@@ -100,25 +96,23 @@ function productTwoArgs(a, b) {
  *  1.10 渡された引数が2の倍数であることを確認するメソッドを実装してください
  *
  */
- function isEven(a) {
+function isEven(a) {
   if (a % 2 === 0) {
-    console.log('2の倍数である');
+    return true;
   } else {
-    console.log('2の倍数ではない');
+    return false;
   }
 }
 // isEven(6);
-
 
 /**
  *  1.11 渡された二つの文字列を連結するメソッドを実装してください
  *
  */
- function concatString(a, b) {
-  console.log(a + b);
+function concatString(a, b) {
+  return a + b;
 }
 // console.log(concatString('hot', 'dog'));
-
 
 module.exports = {
   helloWorld,
@@ -131,5 +125,5 @@ module.exports = {
   productTwoArgs,
   remainderTwoArgs,
   isEven,
-  concatString
-}
+  concatString,
+};

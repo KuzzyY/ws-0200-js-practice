@@ -21,18 +21,51 @@
  *
  */
 
-class Person {
+ class Person {
+  name = "";
+  age = 0;
+  bio = "";
+
+  sayHi() {
+    console.log("Hi!!");
+  }
+
+  describe() {
+    console.log("This is a Person class");
+  }
+
+  constructor() {
+    this.name = "";
+    this.age = "";
+    this.bio = "";
+  }
+
+  get isUnderage() {
+    if (age <= 20) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  toString() {
+    return "name:".name, "age:".age, "bio:".bio;
+  }
 }
 
-function main () {
-  const person = new Person('ichiro', 54, 'I like to play baseball')
-  person.sayHi()
-  Person.describe()
-  person.isUnderage
+const person = new Person();
 
-  person.bio = 'I like to play basketball'
-  return person.toString()
+function main() {
+  const person = new Person("ichiro", 54, "I like to play baseball");
+  person.sayHi();
+  Person.describe();
+  person.isUnderage;
+
+  person.bio = "I like to play basketball";
+  return person.toString();
 }
+
+// console.log(Person(), main());
 
 module.exports = {
   Person,
