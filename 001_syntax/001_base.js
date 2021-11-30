@@ -65,14 +65,13 @@ function subtractTwoArgs(a, b) {
  *  1.7 渡された二つの引数の商を返却するメソッドを実装してください。0での割り算はnullを返却してください。
  *
  */
-function quotientTwoArgs(a, b) {
-  if (a && b !== 0) {
-    return a / b;
-  } else {
+ function quotientTwoArgs(a, b) {
+  if (b === 0) {
     return null;
   }
+  return ~~(a / b);
 }
-// console.log(quotientTwoArgs(3,1));
+// console.log(quotientTwoArgs(2, 0));
 
 /**
  *  1.8 渡された二つの引数の積を返却するメソッドを実装してください

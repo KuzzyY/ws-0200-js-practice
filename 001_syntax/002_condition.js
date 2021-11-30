@@ -5,11 +5,11 @@
  *    と出力するメソッドを実装してください
  *
  */
- function printMessageByAge(age) {
+function printMessageByAge(age) {
   if (20 <= age) {
-    console.log('成年です。');
+    console.log("成年です。");
   } else {
-    console.log('未成年です。');
+    console.log("未成年です。");
   }
 }
 
@@ -22,17 +22,17 @@
  *
  */
 
- function greeding(hour) {
+function greeding(hour) {
   if (4 > hour) {
-    console.log('Good Night');
+    console.log("Good Night");
   } else if (4 <= hour && 12 > hour) {
-    console.log('Good Morning');
+    console.log("Good Morning");
   } else if (12 <= hour && 17 > hour) {
-    console.log('Hello');
+    console.log("Hello");
   } else if (17 <= hour && 24 >= hour) {
-    console.log('Good Night');
+    console.log("Good Night");
   } else {
-    console.log('null');
+    console.log("null");
   }
 }
 
@@ -49,7 +49,6 @@
  *
  */
 
-
  function getDay(day) {
   const dayList = [
     "Sunday",
@@ -60,14 +59,36 @@
     "Friday",
     "Saturday",
   ];
-  return dayList[day];
+
+  if (day <= 6) {
+    console.log(dayList[day]);
+  } else {
+    console.log(0);
+  }
 }
+getDay(7);
 
-// console.log(getDay(3));
+// function getDay(day) {
+//   const dayList = [
+//     "Sunday",
+//     "Monday",
+//     "Tuesday",
+//     "Wednesday",
+//     "Thursday",
+//     "Friday",
+//     "Saturday",
+//   ];
 
+//   if (dayList.length) {
+//     console.log(dayList[day]);
+//   } else {
+//     console.log(0);
+//   }
+// }
+// getDay(0);
 
 module.exports = {
   printMessageByAge,
   greeding,
-  getDay
-}
+  getDay,
+};

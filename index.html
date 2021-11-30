@@ -8,15 +8,43 @@
   </head>
   <body>
     <script>
-      function isDuplicate(array) {
-        const duplicate = [array];
-        if (duplicate === duplicate) {
-          return true;
+      function getDay(day) {
+        const dayList = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+
+        if (dayList.length) {
+          console.log(dayList[day]);
         } else {
-          return false;
+          console.log(0);
         }
       }
-      console.log(isDuplicate([1, 2, 4, 3]));
+      getDay(0);
+
+      function getDay(day) {
+        const dayList = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+
+        if (day <= 6) {
+          console.log(dayList[day]);
+        } else {
+          console.log(0);
+        }
+      }
+      getDay(7);
     </script>
   </body>
 </html>
