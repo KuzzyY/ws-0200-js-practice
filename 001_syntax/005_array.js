@@ -10,7 +10,6 @@
 // // printArray(['1','2','3','4','5','6']);
 
 function printArray(array) {
-  // const displayAll = array;
   for (let i = 0; i < array.length; i++) {
     console.log(array[i]);
   }

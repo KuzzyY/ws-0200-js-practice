@@ -62,15 +62,28 @@ function mutateObject(person) {
  *
  */
 
+// function assignNumber(persons) {
+//   const nameNumber = {
+//     [persons]: 1,
+//     [persons]: 3,
+//     [persons]: 5,
+//     [persons]: 7,
+//   };
+
+//   return nameNumber;
+// }
+// // console.log(assignNumber(["Bob", "Mary", "Ann", "Mike"]));
+
 function assignNumber(persons) {
-  const nameNumber = {
-    [persons]: 1,
-    [persons]: 3,
-    [persons]: 5,
-    [persons]: 7,
+  const num = Math.floor(Math.random() * 10);
+  const humanNumber = {
+    persons: num,
   };
 
-  return nameNumber;
+  for (const property in humanNumber) {
+    const value = humanNumber[property];
+    return "${property}: ${value}";
+  }
 }
 // console.log(assignNumber(["Bob", "Mary", "Ann", "Mike"]));
 
@@ -85,7 +98,7 @@ function assignNumber(persons) {
  *
  */
 
- function isDuplicate(array) {
+function isDuplicate(array) {
   const duplicate = {
     array,
   };
