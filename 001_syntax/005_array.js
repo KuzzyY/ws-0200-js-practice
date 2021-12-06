@@ -3,9 +3,17 @@
  *
  */
 
- function printArray(array) {
-  const displayAll = array;
-  console.log(displayAll);
+//  function printArray(array) {
+//   const displayAll = array;
+//   console.log(displayAll);
+// }
+// // printArray(['1','2','3','4','5','6']);
+
+function printArray(array) {
+  // const displayAll = array;
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
 }
 // printArray(['1','2','3','4','5','6']);
 
@@ -24,8 +32,16 @@
  *      ]
  *
  */
- function getDays() {
-  const listDays = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+function getDays() {
+  const listDays = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
   return listDays;
 }
 // console.log(getDays());
@@ -40,7 +56,7 @@
  *
  */
 
- function findNum(array, num) {
+function findNum(array, num) {
   const number = array;
   if (number.includes(num)) {
     return true;
@@ -60,9 +76,27 @@
  *
  */
 
- function isDuplicate(array) {
-  const duplicate = array;
-  if (duplicate.includes(duplicate)) {
+//  function isDuplicate(array) {
+//   const duplicate = array;
+//   if (duplicate.includes(duplicate)) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// // console.log(isDuplicate([1, 2, 2, 3]));
+
+// function isDuplicate(array) {
+//   if (array === array) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// // console.log(isDuplicate([1, 2, 2, 3]));
+
+function isDuplicate(array) {
+  if (array.includes(array)) {
     return true;
   } else {
     return false;
@@ -74,5 +108,5 @@ module.exports = {
   printArray,
   getDays,
   findNum,
-  isDuplicate
-}
+  isDuplicate,
+};
