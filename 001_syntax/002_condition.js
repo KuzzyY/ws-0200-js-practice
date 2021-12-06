@@ -62,11 +62,9 @@ function greeding(hour) {
 
   if (day <= 6) {
     console.log(dayList[day]);
-  } else {
-    console.log(0);
   }
 }
-getDay(7);
+// getDay(6);
 
 // function getDay(day) {
 //   const dayList = [
@@ -79,13 +77,11 @@ getDay(7);
 //     "Saturday",
 //   ];
 
-//   if (dayList.length) {
+//   if (dayList <= dayList) {
 //     console.log(dayList[day]);
-//   } else {
-//     console.log(0);
 //   }
 // }
-// getDay(0);
+// getDay(8);
 
 module.exports = {
   printMessageByAge,

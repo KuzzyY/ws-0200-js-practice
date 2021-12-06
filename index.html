@@ -8,43 +8,11 @@
   </head>
   <body>
     <script>
-      function getDay(day) {
-        const dayList = [
-          "Sunday",
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-        ];
-
-        if (dayList.length) {
-          console.log(dayList[day]);
-        } else {
-          console.log(0);
-        }
+      function printByChar(str) {
+        const oneChar = str;
+        console.log(oneChar.charAt());
       }
-      getDay(0);
-
-      function getDay(day) {
-        const dayList = [
-          "Sunday",
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-        ];
-
-        if (day <= 6) {
-          console.log(dayList[day]);
-        } else {
-          console.log(0);
-        }
-      }
-      getDay(7);
+      printByChar('good'[3]);
     </script>
   </body>
 </html>

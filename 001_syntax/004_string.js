@@ -90,9 +90,15 @@ function isInclude(a, b) {
  */
 
 function printByChar(str) {
-  console.log(str.split(''));
+  console.log(str.charAt());
 }
-// printByChar('good');
+// printByChar('good'[3]);
+
+// function printByChar(str) {
+//   const oneChar = str;
+//   console.log(oneChar.charAt());
+// }
+// // printByChar('good'[3]);
 
 module.exports = {
   length,
