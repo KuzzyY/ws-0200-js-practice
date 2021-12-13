@@ -75,6 +75,12 @@ function findNum(array, num) {
  *
  */
 
+ function isDuplicate(array) {
+  const str = new Set(array);
+  return str.size !== array.length;
+}
+// console.log(isDuplicate([1, 2, 3]));
+
 //  function isDuplicate(array) {
 //   const duplicate = array;
 //   if (duplicate.includes(duplicate)) {
@@ -94,14 +100,14 @@ function findNum(array, num) {
 // }
 // // console.log(isDuplicate([1, 2, 2, 3]));
 
-function isDuplicate(array) {
-  if (array.includes(array)) {
-    return true;
-  } else {
-    return false;
-  }
-}
-// console.log(isDuplicate([1, 2, 2, 3]));
+// function isDuplicate(array) {
+//   if (array.includes(array)) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// // console.log(isDuplicate([1, 2, 2, 3]));
 
 module.exports = {
   printArray,

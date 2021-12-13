@@ -89,10 +89,19 @@ function isInclude(a, b) {
  *
  */
 
-function printByChar(str) {
-  console.log(str.charAt());
+
+ function printByChar(str) {
+  for (let i = 0; i < str.length; i++) {
+    console.log(str[i]);
+  }
 }
-// printByChar('good'[3]);
+// printByChar('good');
+
+
+// function printByChar(str) {
+//   console.log(str.charAt());
+// }
+// // printByChar('good'[3]);
 
 // function printByChar(str) {
 //   const oneChar = str;

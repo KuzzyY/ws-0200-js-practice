@@ -62,6 +62,21 @@ function mutateObject(person) {
  *
  */
 
+function assignNumber(persons) {
+  const num = Math.floor(Math.random() * 10);
+  const obj = {
+    persons: num,
+  };
+
+  for (let i = 0; i < persons.length; i++) {
+    // return (obj.persons[i] = num);
+    // const persons = obj[i];
+    obj[persons] = i + 1;
+    return obj;
+  }
+}
+// console.log(assignNumber(["Bob", "Mary", "Ann", "Mike"]));
+
 // function assignNumber(persons) {
 //   const nameNumber = {
 //     [persons]: 1,
@@ -74,18 +89,18 @@ function mutateObject(person) {
 // }
 // // console.log(assignNumber(["Bob", "Mary", "Ann", "Mike"]));
 
-function assignNumber(persons) {
-  const num = Math.floor(Math.random() * 10);
-  const humanNumber = {
-    persons: num,
-  };
+// function assignNumber(persons) {
+//   const num = Math.floor(Math.random() * 10);
+//   const humanNumber = {
+//     persons: num,
+//   };
 
-  for (const property in humanNumber) {
-    const value = humanNumber[property];
-    return "${property}: ${value}";
-  }
-}
-// console.log(assignNumber(["Bob", "Mary", "Ann", "Mike"]));
+//   for (const property in humanNumber) {
+//     const value = humanNumber[property];
+//     return "${property}: ${value}";
+//   }
+// }
+// // console.log(assignNumber(["Bob", "Mary", "Ann", "Mike"]));
 
 /**
  *  6.4 配列に重複した要素があれば、true、そうでなければfalseを返す関数を実装してください
@@ -98,17 +113,23 @@ function assignNumber(persons) {
  *
  */
 
+// function isDuplicate(array) {
+//   const duplicate = {
+//     array,
+//   };
+//   if (array == array in duplicate) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// // console.log(isDuplicate([2, 2, 2, 2]));
+
 function isDuplicate(array) {
-  const duplicate = {
-    array,
-  };
-  if (array == array in duplicate) {
-    return true;
-  } else {
-    return false;
-  }
+  const str = new Set(array);
+  return str.size !== array.length;
 }
-// console.log(isDuplicate([2, 2, 2, 2]));
+// console.log(isDuplicate([1, 2, 3]));
 
 module.exports = {
   getPersonObject,
