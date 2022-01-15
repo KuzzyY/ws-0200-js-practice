@@ -8,26 +8,51 @@
   </head>
   <body>
     <script>
-      function assignNumber(persons) {
-        // 空のオブジェクトを作成
-        const obj = {};
-
-        // 配列personsを１つずつ取得するfor文
-        for (let i = 0; i < persons.length; i++) {
-          // 1-10までのランダムな整数を作成
-          const num = Math.floor(Math.random() * 10) + 1;
-
-          // 配列personsの中身を一つずつとってくる
-          const key = persons[i];
-
-          // keyとvalueを追加（key: value）
-          obj[key] = num;
+      class Person {
+        // 1 メソッドsayHi()を実装
+        sayHi() {
+          console.log("Hi!!");
         }
+        console.log(sayHi);
 
-        // for文内でkeyとvalueを追加したobjを返す
-        return obj;
+        // // 2 メソッドdescribe()を実装
+        // describe() {
+        //   console.log("This is a Person class");
+        // }
+
+        // // 3,4 コンストラクタを宣言して、name, age, bioフィールドを初期化
+        // constructor(name, age, bio) {
+        //   this.name = "";
+        //   this.age = 0;
+        //   this.bio = "";
+        // }
+
+        // // 5 ゲッターを宣言
+        // get isUnderage() {
+        //   console.log(this.age <= 20);
+        // }
+
+        // // 6 フィールドの文字列を返却
+        // toString() {
+        //   return this.name, this.age, this.bio;
+        // }
       }
-      console.log(assignNumber(["Bob", "Mary", "Ann", "Mike"]));
+
+
+      // function main() {
+      //   const person = new Person("ichiro", 54, "I like to play baseball");
+      //   person.sayHi();
+      //   Person.describe();
+      //   person.isUnderage;
+
+      //   person.bio = "I like to play basketball";
+      //   return person.toString();
+      // }
+
+      // module.exports = {
+      //   Person,
+      //   main,
+      // };
     </script>
   </body>
 </html>

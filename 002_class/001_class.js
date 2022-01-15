@@ -1,4 +1,3 @@
-
 /**
  *  クラスの定義
  *
@@ -21,39 +20,34 @@
  *
  */
 
- class Person {
-  name = "";
-  age = 0;
-  bio = "";
-
+class Person {
+  // 1 メソッドsayHi()を実装
   sayHi() {
     console.log("Hi!!");
   }
 
+  // 2 メソッドdescribe()を実装
   describe() {
     console.log("This is a Person class");
   }
 
-  constructor() {
+  // 3,4 コンストラクタを宣言して、name, age, bioフィールドを初期化
+  constructor(name, age, bio) {
     this.name = "";
-    this.age = "";
+    this.age = 0;
     this.bio = "";
   }
 
+  // 5 ゲッターを宣言
   get isUnderage() {
-    if (age <= 20) {
-      return true;
-    } else {
-      return false;
-    }
+    console.log(age <= 20);
   }
 
+  // 6 フィールドの文字列を返却
   toString() {
-    return "name:".name, "age:".age, "bio:".bio;
+    return this.name, this.age, this.bio;
   }
 }
-
-const person = new Person();
 
 function main() {
   const person = new Person("ichiro", 54, "I like to play baseball");
@@ -65,9 +59,7 @@ function main() {
   return person.toString();
 }
 
-// console.log(Person(), main());
-
 module.exports = {
   Person,
-  main
-}
+  main,
+};
