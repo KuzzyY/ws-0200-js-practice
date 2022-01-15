@@ -66,23 +66,6 @@ function greeding(hour) {
 }
 // getDay(6);
 
-// function getDay(day) {
-//   const dayList = [
-//     "Sunday",
-//     "Monday",
-//     "Tuesday",
-//     "Wednesday",
-//     "Thursday",
-//     "Friday",
-//     "Saturday",
-//   ];
-
-//   if (dayList <= dayList) {
-//     console.log(dayList[day]);
-//   }
-// }
-// getDay(8);
-
 module.exports = {
   printMessageByAge,
   greeding,

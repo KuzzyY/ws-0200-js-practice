@@ -8,60 +8,24 @@
   </head>
   <body>
     <script>
-      // オブジェクト理解のための練習
-      let obj = { Bob: "1" };
-      console.log((obj.Mary = "2"));
-      console.log((obj.Ann = "3"));
-      console.log((obj.Mike = "4"));
-      console.log(obj);
-      console.log((hoge = "keyyyyy"));
-      console.log((obj.key2 = "hoge"));
-      console.log(obj);
-      console.log((obj[hoge] = "fuga"));
-      console.log(obj);
-
-      // 実行結果：{persons: 7, Bob,Mary,Ann,Mike: 1}
-      // function assignNumber(persons) {
-      //   const num = Math.floor(Math.random() * 10);
-      //   const obj = {
-      //     persons: num,
-      //   };
-
-      //   for (let i = 0; i < persons.length; i++) {
-      //     // return (obj.persons[i] = num);
-      //     // const persons = obj[i];
-      //     obj[persons] = i + 1;
-      //     return obj;
-      //   }
-      // }
-      // console.log(assignNumber(["Bob", "Mary", "Ann", "Mike"]));
-
-      // 実行結果：undefined
-      // function assignNumber(persons) {
-      //   const num = Math.floor(Math.random() * 10);
-      //   const obj = {
-      //     persons: num,
-      //   };
-
-      //   for (let i = 0; i < obj.length; i++) {
-      //     return obj[i];
-      //   }
-      // }
-      // console.log(assignNumber(["Bob", "Mary", "Ann", "Mike"]));
-
-      // 実行結果：undefined
       function assignNumber(persons) {
-        // const num = Math.floor(Math.random() * 10);
-        // const obj = {
-        //   persons: num,
-        // };
+        // 空のオブジェクトを作成
+        const obj = {};
 
-        for (let i = 0; i < obj.length; i++) {
-          // obj.persons = num;
-          // return obj[i];
-          const key = obj[i];
-          obj[key] = i + 1;
+        // 配列personsを１つずつ取得するfor文
+        for (let i = 0; i < persons.length; i++) {
+          // 1-10までのランダムな整数を作成
+          const num = Math.floor(Math.random() * 10) + 1;
+
+          // 配列personsの中身を一つずつとってくる
+          const key = persons[i];
+
+          // keyとvalueを追加（key: value）
+          obj[key] = num;
         }
+
+        // for文内でkeyとvalueを追加したobjを返す
+        return obj;
       }
       console.log(assignNumber(["Bob", "Mary", "Ann", "Mike"]));
     </script>

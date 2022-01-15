@@ -8,6 +8,7 @@
  */
 
 function getPersonObject() {
+  // オブジェクトprofileを定義
   const profile = {
     name: "Bob",
     age: 32,
@@ -32,10 +33,14 @@ function getPersonObject() {
  */
 
 function mutateObject(person) {
+  // dataAオブジェクトに引数personを定義
   const dataA = {
     person,
   };
 
+  // console.log(dataA);
+
+  // ピリオド演算子でdataAをdataBのオブジェクトに書き換え
   dataA.dataB = { name: "Mary", age: 37, gender: "female" };
   return dataA.dataB;
 }
@@ -63,44 +68,25 @@ function mutateObject(person) {
  */
 
 function assignNumber(persons) {
-  const num = Math.floor(Math.random() * 10);
-  const obj = {
-    persons: num,
-  };
+  // 空のオブジェクトを作成
+  const obj = {};
 
+  // 配列personsを１つずつ取得するfor文
   for (let i = 0; i < persons.length; i++) {
-    // return (obj.persons[i] = num);
-    // const persons = obj[i];
-    obj[persons] = i + 1;
-    return obj;
+    // 1-10までのランダムな整数を作成
+    const num = Math.floor(Math.random() * 10) + 1;
+
+    // 配列personsの中身を一つずつとってくる
+    const key = persons[i];
+
+    // keyとvalueを追加（key: value）
+    obj[key] = num;
   }
+
+  // for文内でkeyとvalueを追加したobjを返す
+  return obj;
 }
-// console.log(assignNumber(["Bob", "Mary", "Ann", "Mike"]));
-
-// function assignNumber(persons) {
-//   const nameNumber = {
-//     [persons]: 1,
-//     [persons]: 3,
-//     [persons]: 5,
-//     [persons]: 7,
-//   };
-
-//   return nameNumber;
-// }
-// // console.log(assignNumber(["Bob", "Mary", "Ann", "Mike"]));
-
-// function assignNumber(persons) {
-//   const num = Math.floor(Math.random() * 10);
-//   const humanNumber = {
-//     persons: num,
-//   };
-
-//   for (const property in humanNumber) {
-//     const value = humanNumber[property];
-//     return "${property}: ${value}";
-//   }
-// }
-// // console.log(assignNumber(["Bob", "Mary", "Ann", "Mike"]));
+console.log(assignNumber(["Bob", "Mary", "Ann", "Mike"]));
 
 /**
  *  6.4 配列に重複した要素があれば、true、そうでなければfalseを返す関数を実装してください

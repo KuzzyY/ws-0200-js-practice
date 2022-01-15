@@ -41,16 +41,11 @@ function displayArgument(arg) {
  *  1.5 渡された二つの引数の合計を返却するメソッドを実装してください
  *
  */
-// function sumTwoArgs(a, b) {
-//   return a + b;
-// }
-// console.log(sumTwoArgs(1, 2));
 
 function sumTwoArgs(a, b) {
-  // console.log(a + b);
   return a + b;
 }
-// sumTwoArgs(1,2);
+// console.log(sumTwoArgs(1,2));
 
 /**
  *  1.6 渡された二つの引数の差を返却するメソッドを実装してください
@@ -95,14 +90,14 @@ function remainderTwoArgs(a) {
  *  1.10 渡された引数が2の倍数であることを確認するメソッドを実装してください
  *
  */
-function isEven(a) {
+ function isEven(a) {
   if (a % 2 === 0) {
     return true;
   } else {
     return false;
   }
 }
-// isEven(6);
+// console.log(isEven(90));
 
 /**
  *  1.11 渡された二つの文字列を連結するメソッドを実装してください

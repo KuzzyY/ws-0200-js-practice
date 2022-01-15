@@ -3,17 +3,14 @@
  *
  */
 
-//  function printArray(array) {
-//   const displayAll = array;
-//   console.log(displayAll);
-// }
-// // printArray(['1','2','3','4','5','6']);
-
-function printArray(array) {
+ function printArray(array) {
+  // 引数の長さ分だけ、for文を実行
   for (let i = 0; i < array.length; i++) {
     console.log(array[i]);
   }
 }
+
+// 配列[ ]を定義
 // printArray(['1','2','3','4','5','6']);
 
 /**
@@ -31,7 +28,9 @@ function printArray(array) {
  *      ]
  *
  */
-function getDays() {
+ function getDays() {
+        
+  // 配列を宣言
   const listDays = [
     "Monday",
     "Tuesday",
@@ -55,15 +54,16 @@ function getDays() {
  *
  */
 
-function findNum(array, num) {
-  const number = array;
-  if (number.includes(num)) {
+ function findNum(array, num) {
+
+  // arrayの中にnumが含まれる場合true
+  if (array.includes(num)) {
     return true;
   } else {
     return false;
   }
 }
-// console.log(findNum([1, 2, 3], 4));
+// console.log(findNum([1, 2, 3], 3));
 
 /**
  *  5.4 配列に重複した要素があれば、true、そうでなければfalseを返す関数を実装してください
@@ -81,33 +81,7 @@ function findNum(array, num) {
 }
 // console.log(isDuplicate([1, 2, 3]));
 
-//  function isDuplicate(array) {
-//   const duplicate = array;
-//   if (duplicate.includes(duplicate)) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
-// // console.log(isDuplicate([1, 2, 2, 3]));
 
-// function isDuplicate(array) {
-//   if (array === array) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
-// // console.log(isDuplicate([1, 2, 2, 3]));
-
-// function isDuplicate(array) {
-//   if (array.includes(array)) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
-// // console.log(isDuplicate([1, 2, 2, 3]));
 
 module.exports = {
   printArray,
