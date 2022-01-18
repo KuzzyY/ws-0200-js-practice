@@ -8,36 +8,37 @@
   </head>
   <body>
     <script>
+
+
+
       class Person {
         // 1 メソッドsayHi()を実装
         sayHi() {
-          console.log("Hi!!");
-        }
-        console.log(sayHi);
+            console.log("Hi!!");
+          }
 
+          const person = new Person("ichiro", 54, "I like to play baseball");
+
+          person.sayHi();
         // // 2 メソッドdescribe()を実装
         // describe() {
         //   console.log("This is a Person class");
         // }
-
         // // 3,4 コンストラクタを宣言して、name, age, bioフィールドを初期化
         // constructor(name, age, bio) {
         //   this.name = "";
         //   this.age = 0;
         //   this.bio = "";
         // }
-
         // // 5 ゲッターを宣言
         // get isUnderage() {
         //   console.log(this.age <= 20);
         // }
-
         // // 6 フィールドの文字列を返却
         // toString() {
         //   return this.name, this.age, this.bio;
         // }
       }
-
 
       // function main() {
       //   const person = new Person("ichiro", 54, "I like to play baseball");
