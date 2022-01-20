@@ -21,33 +21,79 @@
  */
 
 class Person {
-  // 1 メソッドsayHi()を実装
+  // 1 インスタンスメソッドsayHi()を実装
   sayHi() {
     console.log("Hi!!");
   }
 
-  // 2 メソッドdescribe()を実装
-  describe() {
+  // // 2 クラス（静的）メソッドdescribe()を実装
+  static describe() {
     console.log("This is a Person class");
   }
 
-  // 3,4 コンストラクタを宣言して、name, age, bioフィールドを初期化
+  // // 3,4 コンストラクタを宣言して、name, age, bioフィールドを初期化
   constructor(name, age, bio) {
-    this.name = "";
-    this.age = 0;
-    this.bio = "";
+    if (name) {
+      this.name = name;
+    } else {
+      this.name = "";
+    }
+    if (age) {
+      this.age = age;
+    } else {
+      this.age = 0;
+    }
+    if (bio) {
+      this.bio = bio;
+    } else {
+      this.bio = "";
+    }
+    // console.log(name, age, bio);
   }
 
-  // 5 ゲッターを宣言
+  // // 5 ゲッターを宣言
   get isUnderage() {
-    console.log(age <= 20);
+    // console.log(this.age < 20);
+
+    return this.age < 20;
   }
 
-  // 6 フィールドの文字列を返却
+  // // 6 フィールドの文字列を返却
   toString() {
-    return this.name, this.age, this.bio;
+    // return name, age, bio;
+    return "name: " + this.name + ", age: " + this.age + ", bio: " + this.bio;
+    // return constructor();
   }
 }
+
+// class Person {
+//   // 1 メソッドsayHi()を実装
+//   sayHi() {
+//     console.log("Hi!!");
+//   }
+
+//   // 2 メソッドdescribe()を実装
+//   describe() {
+//     console.log("This is a Person class");
+//   }
+
+//   // 3,4 コンストラクタを宣言して、name, age, bioフィールドを初期化
+//   constructor(name, age, bio) {
+//     this.name = "";
+//     this.age = 0;
+//     this.bio = "";
+//   }
+
+//   // 5 ゲッターを宣言
+//   get isUnderage() {
+//     console.log(age <= 20);
+//   }
+
+//   // 6 フィールドの文字列を返却
+//   toString() {
+//     return this.name, this.age, this.bio;
+//   }
+// }
 
 function main() {
   const person = new Person("ichiro", 54, "I like to play baseball");
