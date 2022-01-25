@@ -32,22 +32,29 @@ class Person {
   }
 
   // // 3,4 コンストラクタを宣言して、name, age, bioフィールドを初期化
-  constructor(name, age, bio) {
-    if (name) {
-      this.name = name;
-    } else {
-      this.name = "";
-    }
-    if (age) {
-      this.age = age;
-    } else {
-      this.age = 0;
-    }
-    if (bio) {
-      this.bio = bio;
-    } else {
-      this.bio = "";
-    }
+  constructor(name = "", age = 0, bio = "") {
+    // 元のコード
+    // if (name) {
+    //   this.name = name;
+    // } else {
+    //   this.name = "";
+    // }
+    // if (age) {
+    //   this.age = age;
+    // } else {
+    //   this.age = 0;
+    // }
+    // if (bio) {
+    //   this.bio = bio;
+    // } else {
+    //   this.bio = "";
+    // }
+
+    // 引数に初期値を設定し、フィールドを初期化したコード
+    this.name = name;
+    this.age = age;
+    this.bio = bio;
+
     // console.log(name, age, bio);
   }
 
@@ -61,7 +68,13 @@ class Person {
   // // 6 フィールドの文字列を返却
   toString() {
     // return name, age, bio;
-    return "name: " + this.name + ", age: " + this.age + ", bio: " + this.bio;
+
+    // 元の書き方
+    // return "name: " + this.name + ", age: " + this.age + ", bio: " + this.bio;
+
+    // テンプレート文字列を使った書き方
+    return `name: ${this.name}, age: ${this.age}, bio: ${this.bio}`;
+
     // return constructor();
   }
 }

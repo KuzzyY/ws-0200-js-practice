@@ -34,9 +34,15 @@ class Animal {
 
 /* ↓ ↓ ↓ こちらに実装 */
 class Dog extends Animal {
+
   type = "dog";
 
-  // コンストラクタでtypeフィールドを初期化
+
+
+  // コンストラクタはフィールドを初期化する
+
+
+  // // コンストラクタでtypeフィールドを初期化
   // constructor(type) {
 
   //   // 親クラスのtypeを参照
@@ -44,17 +50,32 @@ class Dog extends Animal {
 
   //   // typeフィールド: dog
   //   // this.type = dog;
-  //   this.type = type;
+  //   this.type
   // }
-  constructor(type,dog) {
 
-    // 親クラスのtypeを参照
-    super(type);
+  // const type = new Dog('hoge');
 
-    // typeフィールド: dog
-    // this.type = dog;
-    this.dog = dog;
-  }
+  // constructor(dog) {
+
+  //   // 親クラスのtypeを参照
+  //   super(type);
+
+  //   // typeフィールド: dog
+  //   // this.type = dog;
+  //   this.dog = "";
+  // }
+
+
+
+  // constructor(type,dog) {
+
+  //   // 親クラスのtypeを参照
+  //   super(type);
+
+  //   // typeフィールド: dog
+  //   // this.type = dog;
+  //   this.dog = dog;
+  // }
   
   // barkメソッド: wang, wang! を標準出力
   bark() {
@@ -65,10 +86,7 @@ class Dog extends Animal {
 }
 
 class Duck extends Animal {
-  constructor(type) {
-    super(type);
-    this.type = type;
-  }
+  type = "duck";
 
   bark() {
     // return "wang, wang!";
@@ -77,10 +95,7 @@ class Duck extends Animal {
 }
 
 class Chicken extends Animal {
-  constructor(type) {
-    super(type);
-    this.type = type;
-  }
+  type = "chicken";
 
   bark() {
     // return "wang, wang!";
