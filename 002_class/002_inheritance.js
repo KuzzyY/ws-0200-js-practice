@@ -35,10 +35,15 @@ class Animal {
 /* ↓ ↓ ↓ こちらに実装 */
 class Dog extends Animal {
 
+
+  // コンストラクタでtypeフィールドを初期化
   constructor(type) {
-    // typeフィールド: dog
+
+    // 親クラスのtypeを参照
     super(type);
 
+    // typeフィールド: dog
+    // this.type = dog;
     this.type = type;
   }
   
