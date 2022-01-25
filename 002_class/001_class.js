@@ -66,6 +66,20 @@ class Person {
   }
 }
 
+// クラスをデバックする際は、インスタンス化→呼び出し
+// const person = new Person(name, age, bio);
+
+// let person = new Person();
+
+// インスタンス化（実態化）
+// const person = new Person("ichiro", 19, "I like to play baseball");
+
+// person.sayHi();
+// person.describe();
+// console.log(person.isUnderage);
+// console.log(person.toString());
+
+// 最初に挫折した時のコード
 // class Person {
 //   // 1 メソッドsayHi()を実装
 //   sayHi() {

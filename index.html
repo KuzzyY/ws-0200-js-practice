@@ -8,73 +8,94 @@
   </head>
   <body>
     <script>
-      class Person {
-        // 1 インスタンスメソッドsayHi()を実装
-        sayHi() {
-          console.log("Hi!!");
+      /**
+       *  継承
+       *
+       *  Animalクラスを継承するDog, Duck, Chikenクラスを実装してください
+       *  main関数は編集不要です。
+       *
+       *  Dogクラス
+       *    typeフィールド: dog
+       *    barkメソッド: wang, wang! を標準出力
+       *  Duckクラス
+       *    typeフィールド: duck
+       *    barkメソッド: quack, quack! を標準出力
+       *  Chickenクラス
+       *    typeフィールド: chicken
+       *    barkメソッド: cock-a-doodle-do! を標準出力
+       *
+       */
+
+      class Animal {
+        type = "animal";
+
+        breeth() {
+          console.log("breezing");
         }
 
-        // // 2 クラス（静的）メソッドdescribe()を実装
-        static describe() {
-          console.log("This is a Person class");
+        who() {
+          console.log(this.type);
         }
 
-        // // 3,4 コンストラクタを宣言して、name, age, bioフィールドを初期化
-        constructor(name, age, bio) {
-          if (name) {
-            this.name = name;
-          } else {
-            this.name = "";
-          }
-          if (age) {
-            this.age = age;
-          } else {
-            this.age = 0;
-          }
-          if (bio) {
-            this.bio = bio;
-          } else {
-            this.bio = "";
-          }
-          // console.log(name, age, bio);
-        }
-
-        // // 5 ゲッターを宣言
-        get isUnderage() {
-          // console.log(this.age < 20);
-
-          return this.age < 20;
-        }
-
-        // // 6 フィールドの文字列を返却
-        toString() {
-          // return name, age, bio;
-          return "name: " + this.name + ", age: " + this.age +  ", bio: " + this.bio;
-          // return constructor();
+        bark() {
+          throw Error("not implemented");
         }
       }
 
-      // const person = new Person(name, age, bio);
+      /* ↓ ↓ ↓ こちらに実装 */
+      class Dog extends Animal {
+        constructor(type) {
+          // typeフィールド: dog
+          super(type);
+          this.type = type;
+        }
 
-      // let person = new Person();
+        // barkメソッド: wang, wang! を標準出力
+        bark() {
+          // return "wang, wang!";
+          console.log("wang, wang!");
+        }
+      }
 
-      // インスタンス化（実態化）
-      const person = new Person("ichiro", 19, "I like to play baseball");
+      class Duck extends Animal {
+        constructor(type) {
+          super(type);
+          this.type = type;
+        }
 
-      // person.sayHi();
-      // person.describe();
-      // console.log(person.isUnderage);
-      console.log(person.toString());
+        bark() {
+          // return "wang, wang!";
+          console.log("quack, quack!");
+        }
+      }
 
-      // function main() {
-      //   const person = new Person("ichiro", 54, "I like to play baseball");
-      //   person.sayHi();
-      //   Person.describe();
-      //   person.isUnderage;
+      class Chicken extends Animal {
+        constructor(type) {
+          super(type);
+          this.type = type;
+        }
 
-      //   person.bio = "I like to play basketball";
-      //   return person.toString();
-      // }
+        bark() {
+          // return "wang, wang!";
+          console.log("cock-a-doodle-do!");
+        }
+      }
+
+      /* ↑ ↑ ↑ こちらに実装 */
+
+      function main() {
+        const dog = new Dog();
+        const duck = new Duck();
+        const chicken = new Chicken();
+
+        dog.who();
+        duck.who();
+        chicken.who();
+
+        dog.bark();
+        duck.bark();
+        chicken.bark();
+      }
     </script>
   </body>
 </html>
