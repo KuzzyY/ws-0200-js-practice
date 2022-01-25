@@ -34,17 +34,26 @@ class Animal {
 
 /* ↓ ↓ ↓ こちらに実装 */
 class Dog extends Animal {
-
+  type = "dog";
 
   // コンストラクタでtypeフィールドを初期化
-  constructor(type) {
+  // constructor(type) {
+
+  //   // 親クラスのtypeを参照
+  //   super(type);
+
+  //   // typeフィールド: dog
+  //   // this.type = dog;
+  //   this.type = type;
+  // }
+  constructor(type,dog) {
 
     // 親クラスのtypeを参照
     super(type);
 
     // typeフィールド: dog
     // this.type = dog;
-    this.type = type;
+    this.dog = dog;
   }
   
   // barkメソッド: wang, wang! を標準出力
