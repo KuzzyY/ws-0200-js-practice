@@ -41,8 +41,6 @@ class Dog extends Animal {
 
     this.type = type;
   }
-
-  who() {}
   
   // barkメソッド: wang, wang! を標準出力
   bark() {
