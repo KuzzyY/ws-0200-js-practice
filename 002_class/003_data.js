@@ -22,6 +22,7 @@ class List {
   }
 
   /** リストの長さを返す
+   * 
    *
    * @return {Number}
    */
@@ -47,6 +48,7 @@ class List {
    */
   push(item) {
     // TODO:
+
   }
 
   /** 与えられた引数により、リストの 要素を削除する
