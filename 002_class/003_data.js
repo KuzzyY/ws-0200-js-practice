@@ -60,7 +60,7 @@ class List {
     // TODO:
 
     // 要素を削除
-    this.data.splice(targetIndex);
+    return this.data.splice(targetIndex);
     // return this.data.slice(targetIndex);
   }
 
