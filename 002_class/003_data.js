@@ -22,7 +22,7 @@ class List {
   }
 
   /** リストの長さを返す
-   * 
+   *
    *
    * @return {Number}
    */
@@ -32,13 +32,13 @@ class List {
   }
 
   /** 引数で渡された添字のデータを取得する
-   *
+   * x番目の数字を取ってくるメソッドを実装する
    * @param {Number} index
    * @return {Number}
    */
   index(index) {
     // TODO:
-    return this;
+    return this.data[index];
   }
 
   /** リストの 要素を追加する
@@ -48,7 +48,7 @@ class List {
    */
   push(item) {
     // TODO:
-
+    this.data.push(item);
   }
 
   /** 与えられた引数により、リストの 要素を削除する
@@ -58,6 +58,10 @@ class List {
    */
   remove(targetIndex) {
     // TODO:
+
+    // 要素を削除
+    this.data.splice(targetIndex);
+    // return this.data.slice(targetIndex);
   }
 
   /** リストの 末尾の要素を取得する
@@ -211,5 +215,5 @@ class Queue {
 module.exports = {
   List,
   Stack,
-  Queue
+  Queue,
 };

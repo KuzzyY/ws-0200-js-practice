@@ -22,6 +22,7 @@
 
 class Person {
   // 1 インスタンスメソッドsayHi()を実装
+  // クラスメソッド
   sayHi() {
     console.log("Hi!!");
   }

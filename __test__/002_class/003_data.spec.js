@@ -50,6 +50,7 @@ describe('List', () => {
 
   test('#remove', () => {
     let obj = new List([1, 2, 3])
+
     expect(obj.remove(1)).toEqual(2)
 
     expect(obj.index(0)).toEqual(1)
