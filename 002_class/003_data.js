@@ -60,8 +60,8 @@ class List {
     // TODO:
 
     // 要素を削除
-    return this.data.splice(targetIndex);
     // return this.data.slice(targetIndex);
+    return this.data.splice(targetIndex, 1);
   }
 
   /** リストの 末尾の要素を取得する
