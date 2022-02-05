@@ -61,7 +61,9 @@ class List {
 
     // 要素を削除
     // return this.data.slice(targetIndex);
-    return this.data.splice(targetIndex, 1);
+    // return this.data.splice(targetIndex, 1);
+    const newdata = this.data.splice(targetIndex, 1);
+    return newdata;
   }
 
   /** リストの 末尾の要素を取得する
@@ -71,6 +73,7 @@ class List {
    */
   pop() {
     // TODO:
+    return this.data.pop();
   }
 
   /** リストの 先頭の要素を取得する
@@ -79,6 +82,7 @@ class List {
    */
   shift() {
     // TODO:
+    return this.data.shift();
   }
 
   /** リストの の中から引数に合致する値を取得する
@@ -90,6 +94,16 @@ class List {
    */
   find(target) {
     // TODO:
+    // if (this.data.includes(target)) {
+    //   return target;
+    // }
+
+    for (let i = 0; (i = target); i++) {
+      return target;
+      // if (i > target) {
+      //   break;
+      // }
+    }
   }
 
   /** リストの の中から引数に合致する値のindexを取得する。見つからない場合は-1を返す
@@ -101,6 +115,9 @@ class List {
    */
   findIndex(target) {
     // TODO:
+    if (this.data.findIndex(target)) {
+      return target;
+    }
   }
 
   /** リストの の中から要素に合致する数を取り除く
