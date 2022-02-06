@@ -95,7 +95,7 @@ class List {
   find(target) {
     // TODO:
 
-    // 成功したincludesメソッド
+    // 成功：includesメソッド
     // if (this.data.includes(target)) {
     //   return target;
     // }
