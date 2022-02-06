@@ -63,7 +63,7 @@ class List {
     // return this.data.slice(targetIndex);
     // return this.data.splice(targetIndex, 1);
     const newdata = this.data.splice(targetIndex, 1);
-    return newdata;
+    return newdata[0];
   }
 
   /** リストの 末尾の要素を取得する
@@ -94,15 +94,20 @@ class List {
    */
   find(target) {
     // TODO:
+
+    // 成功したincludesメソッド
     // if (this.data.includes(target)) {
     //   return target;
     // }
 
-    for (let i = 0; (i = target); i++) {
-      return target;
-      // if (i > target) {
-      //   break;
-      // }
+    let i = this.data;
+
+    for (let i = 0; i < target; i++) {
+      if ((i = target)) {
+        return target;
+      } else {
+        break;
+      }
     }
   }
 
