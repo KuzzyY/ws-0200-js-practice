@@ -129,17 +129,34 @@
     </script> -->
 
     <script>
-      function find(target) {
-        const i = 2;
+      function index(target) {
+        return "text"[target];
+      }
+      console.log(index([1]));
 
-        for (let i = 0; i > target; i++) {
-          if ((i = target)) {
-            return target;
-          }
+      function remove(targetIndex) {
+        const newdata = [1, 2, 3].splice(targetIndex, 1);
+        return newdata[0];
+      }
+      console.log(remove([1]));
+
+      function find(target) {
+        let num = [1, 2, 3];
+
+        for (let i = 0; (i = num); i++) {
+          return num[target];
         }
       }
+      console.log(find([2]));
 
-      console.log(find([1, 2, 3]));
+      function findindex(target) {
+        let num = [1, 2, 3];
+
+        if (num.findIndex(target)) {
+          return target;
+        }
+      }
+      console.log(findindex([2]));
     </script>
   </body>
 </html>

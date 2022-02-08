@@ -100,14 +100,36 @@ class List {
     //   return target;
     // }
 
-    let i = this.data;
+    // let i = this.data;
 
-    for (let i = 0; i < target; i++) {
-      if ((i = target)) {
-        return target;
-      } else {
-        break;
-      }
+    // for (let i = 0; i < target; i++) {
+    //   if ((i === target)) {
+    //     return target;
+    //   } else {
+    //     break;
+    //   }
+    // }
+
+    // for (let i = 0; i < target; i++) {
+    //   if ((this.data === target)) {
+    //     return target;
+    //   } else {
+    //     break;
+    //   }
+    // }
+
+    // 理解するためのデモコード
+    // function find(target) {
+    //   let num = [1, 2, 3];
+
+    //   for (let i = 0; i = num; i++) {
+    //     return num[target];
+    //   }
+    // }
+    // console.log(find([2]));
+
+    for (let i = 0; (i = this.data[target]); i++) {
+      return target;
     }
   }
 
@@ -120,9 +142,16 @@ class List {
    */
   findIndex(target) {
     // TODO:
-    if (this.data.findIndex(target)) {
+    // if (this.data.findIndex(target)) {
+    //   return target;
+    // }
+
+
+    for (let i = 0; (i = this.data[target]); i++) {
       return target;
     }
+
+
   }
 
   /** リストの の中から要素に合致する数を取り除く
