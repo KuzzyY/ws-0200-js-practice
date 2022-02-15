@@ -3,47 +3,28 @@
  *
  */
 
- function printOneToTen() {
-  // xを０とする変数を定義
-  let x = 0;
+function printOneToTen() {
+  for (let i = -1; i < 10; i++) {
+    console.log(i + 1);
 
-  // xに１を足して出力
-  console.log(x);
-  console.log(x + 1);
-  console.log(x + 2);
-  console.log(x + 3);
-  console.log(x + 4);
-  console.log(x + 5);
-  console.log(x + 6);
-  console.log(x + 7);
-  console.log(x + 8);
-  console.log(x + 9);
-  console.log(x + 10);
+    if (i === 10) {
+      return;
+    }
+  }
 }
-// printOneToTen();
+printOneToTen();
 
 /**
  *  3.2 0~10までの数字を数字の大きい順に表示するメソッドを実装してください
  * */
 
- function printOneToTenDesc() {
-  // xを10とする変数を定義
-  let x = 10;
-
-  // xに１を足して出力
-  console.log(x);
-  console.log(x - 1);
-  console.log(x - 2);
-  console.log(x - 3);
-  console.log(x - 4);
-  console.log(x - 5);
-  console.log(x - 6);
-  console.log(x - 7);
-  console.log(x - 8);
-  console.log(x - 9);
-  console.log(x - 10);
+function printOneToTenDesc() {
+  for (let i = 0; i < 10; i++) {
+    console.log(10 - i);
+  }
+  console.log(0);
 }
-// printOneToTenDesc();
+printOneToTenDesc();
 
 /**
  *  3.3 while文を使って0~10までの数字を小さい順番に表示するメソッドを実装してください
@@ -51,15 +32,18 @@
  */
 
 function printOneToTenWhile() {
-  // xを０とする変数を定義
-  let x = 0;
+  // 再代入可能な変数let
+  let x = -1;
 
-  // xが10以下の場合、xに１を足して出力し続ける
-  while (x <= 10) {
-    console.log(x);
+  // xが10より小さい場合
+  while (x < 10) {
+    // xに1を足して再代入する
     x += 1;
+    // xを出力する
+    console.log(x);
   }
 }
+printOneToTenWhile();
 
 /**
  *  3.4 while文を使って0~10までの数字を大きい順番に表示するメソッドを実装してください
@@ -67,19 +51,20 @@ function printOneToTenWhile() {
  */
 
 function printOneToTenWhileDesc() {
-  // xを10とする変数を定義
-  let x = 10;
+  let x = 11;
 
-  // xが0以上の場合、xから１を引いて出力し続ける
-  while (x >= 0) {
-    console.log(x);
+  // xが0より大きい場合(0を含めて処理)
+  while (x > 0) {
     x -= 1;
+
+    console.log(x);
   }
 }
+printOneToTenWhileDesc();
 
 module.exports = {
   printOneToTen,
   printOneToTenDesc,
   printOneToTenWhile,
-  printOneToTenWhileDesc
-}
+  printOneToTenWhileDesc,
+};

@@ -129,6 +129,7 @@ class List {
     // console.log(find([2]));
 
     for (let i = 0; (i = this.data[target]); i++) {
+      
       return target;
     }
   }

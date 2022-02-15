@@ -3,15 +3,14 @@
  *
  */
 
- function printArray(array) {
-  // 引数の長さ分だけ、for文を実行
-  for (let i = 0; i < array.length; i++) {
+function printArray(array) {
+  // for文：配列arrayの長さ分だけループさせる
+  for (i = 0; i < array.length; i++) {
+    // arrayの長さ分の引数arrayを取得
     console.log(array[i]);
   }
 }
-
-// 配列[ ]を定義
-// printArray(['1','2','3','4','5','6']);
+console.log(printArray("test"));
 
 /**
  *  5.2 関数内で全ての曜日を配列として宣言して返却するメソッドを実装してください
@@ -28,10 +27,8 @@
  *      ]
  *
  */
- function getDays() {
-        
-  // 配列を宣言
-  const listDays = [
+function getDays() {
+  const days = [
     "Monday",
     "Tuesday",
     "Wednesday",
@@ -40,9 +37,12 @@
     "Saturday",
     "Sunday",
   ];
-  return listDays;
+
+  for (i = 0; i < days.length; i++) {
+    console.log(days[i]);
+  }
 }
-// console.log(getDays());
+console.log(getDays());
 
 /**
  *  5.3 配列に特定の数があった場合にtrue、そうでない場合にfalseを返す関数を実装してください
@@ -54,16 +54,10 @@
  *
  */
 
- function findNum(array, num) {
-
-  // arrayの中にnumが含まれる場合true
-  if (array.includes(num)) {
-    return true;
-  } else {
-    return false;
-  }
+function findNum(array, num) {
+  return array.includes(num);
 }
-// console.log(findNum([1, 2, 3], 3));
+console.log(findNum([1, 2, 3], 4));
 
 /**
  *  5.4 配列に重複した要素があれば、true、そうでなければfalseを返す関数を実装してください
@@ -75,13 +69,23 @@
  *
  */
 
- function isDuplicate(array) {
-  const str = new Set(array);
-  return str.size !== array.length;
+function isDuplicate(array) {
+  // 配列arrayを展開
+  for (i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
 }
-// console.log(isDuplicate([1, 2, 3]));
+console.log(isDuplicate("1223"));
 
-
+function isDuplicate(array) {
+  // 配列arrayを展開
+  for (i = 0; i < array.length; i++) {
+    if (array[i] === array[i]) {
+      return true;
+    }
+  }
+}
+console.log(isDuplicate("123"));
 
 module.exports = {
   printArray,
